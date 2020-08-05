@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 
 import './App.css';
@@ -7,6 +7,13 @@ function App() {
   const [url, setUrl] = useState('');
   const [slug, setSlug] = useState('');
   const [shortLink, setShortLink] = useState('');
+
+  useEffect(() => {
+    const qParams = window.location.search;
+    if(qParams.includes('?q=')){
+      window.location.href = `https://shmag.herokuapp.com/${qParams.split('?q=')[1]}`;
+    }
+  });
 
   const createUrl = async (e) => {
     e.preventDefault();
