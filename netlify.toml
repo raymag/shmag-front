@@ -1,7 +1,0 @@
-[[redirects]]
-  from = "/*"
-  to = "/index.html/:q"
-  query = {
-      q = :q
-  }
-  status = 200
