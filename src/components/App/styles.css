@@ -9,7 +9,6 @@ body {
 }
 
 #app {
-  background: yellow;
   border-radius: 0.5rem;
   display: flex;
   align-items: center;
@@ -23,6 +22,16 @@ body {
   padding: 0.8rem 6rem;
   background: #e5e5e5;
   text-align: center;
+}
+
+#app .logo a{
+  text-decoration: none;
+  border-bottom: solid 0.1rem #6800ca00;
+  transition: border .5s ease-in-out;
+}
+
+#app .logo a:hover{
+  border-bottom: solid 0.1rem #a400ff;
 }
 
 #app .logo h1, p {

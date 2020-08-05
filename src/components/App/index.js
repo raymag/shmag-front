@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 
-import './App.css';
+import './styles.css';
 
 function App() {
   const [url, setUrl] = useState('');
@@ -60,14 +60,14 @@ function App() {
   return (
     <div id="app">
       <div className="logo">
-        <h1>SHMAG</h1>
-        <p>Link Shortener</p>
+        <h1><a href="https://raymag.github.io">SHMAG</a></h1>
+        <p>URL Shortener</p>
       </div>
     <form id="formHolder" onSubmit={createUrl}>
       
       <div className="input-block">
         <label htmlFor="url">
-          Url
+          URL
         </label>
         <input type="text" onChange={changeUrl} id="url" placeholder="https://example.com" required />
       </div>
