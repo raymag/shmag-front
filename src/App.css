@@ -1,0 +1,162 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+body {
+  background: #222;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+#app {
+  background: yellow;
+  border-radius: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  font-family: 'Poppins', sans-serif;
+}
+
+#app .logo {
+  width: 100%;
+  padding: 0.8rem 6rem;
+  background: #e5e5e5;
+  text-align: center;
+}
+
+#app .logo h1, p {
+  margin: 0;
+  color: #5c118f;
+}
+
+#app .logo p {
+  font-weight: bold;
+  color: #5d118fda;
+}
+
+#app #formHolder {
+  width: 100%;
+  padding: 6rem;
+  background: linear-gradient(45deg, #2700ff, #a400ff);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-evenly;
+}
+
+#app #formHolder .input-block {
+  width: 100%;
+  padding: 0.4rem 0;
+}
+
+#app #formHolder .input-block label {
+  font-size: 1.6rem;
+  color: #ffd900;
+}
+
+#app #formHolder .input-block label span {
+  color: #e5e5e5
+}
+
+#app #formHolder .input-block input {
+  width: 100%;
+  height: 3rem;
+  font-size: 2rem;
+  color: #2d0850;
+}
+
+#app #formHolder .input-block input:hover {
+  background: #e5e5e5;
+}
+
+#app #formHolder button {
+  width: 100%;
+  padding: 1rem;
+  background: #ffd900;
+  outline: none;
+  border: none;
+  border-radius: 0.2rem;
+  cursor: pointer;
+  margin-top: 0.5rem;
+  color: #2d0850;
+  font-weight: bolder;
+  font-size: 1.6rem;
+  transition: background .3s;
+}
+
+#app #formHolder button:hover {
+  background: #d3b408;
+  color: #6800ca;
+}
+
+#app #formHolder button:active {
+  background: #e5e5e5;
+}
+
+#app #short-link-holder {
+  margin: 1rem auto;
+  width: 70%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+#app #short-link-holder input {
+  width: 80%;
+  padding: 0.1rem 0.5rem;
+  height: 2rem;
+  border-radius: 0.2rem;
+}
+
+#app #short-link-holder button {
+  margin: 0;
+  font-size: 1rem;
+  padding: 0.1rem 0.5rem;
+  width: auto;
+  height: 2rem;
+}
+
+@media (max-width: 720px){
+  body {
+    width: 100%;
+  }
+
+  #app {
+    height: 100vh;
+  }
+  
+  #app .logo{
+    padding: 0;
+    width: 100vw;
+  }
+  
+  #formHolder {
+    width: 100vw;
+    height: 100vh;
+    padding: 5rem 0 !important;
+    justify-content: initial !important;
+  }
+
+
+  #formHolder input{
+    width: 80% !important;
+  }
+
+  #formHolder .input-block {
+    padding: 1rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  #formHolder > button {
+    width: 90% !important;
+    margin: 0 auto;
+  }
+
+  #formHolder #short-link-holder input{
+    margin-right: 1rem;
+  }
+}
