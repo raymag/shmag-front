@@ -36,7 +36,7 @@ function App() {
       },
       data: dataToSend})
       .then(res => {
-        setShortLink(`${shortlink_base_url}/${res.data.slug}`);
+        setShortLink(`${shortlink_base_url}?q=${res.data.slug}`);
       })
       .catch(error => {
         setShortLink('Link is Invalid')
