@@ -6,5 +6,5 @@ The website was built with ReactJS and is currently hosted on Netlify, access it
 *With SHMAG, you can easily shorten your links and make it more presentable. Enjoy yourself ;)*
 
 <div style="margin:auto">
-<img width=30% src="https://media.giphy.com/media/kfuef33tMMTjeC2pF7/giphy.gif" alt="rocket gif">
+<img width=40% src="https://i.imgur.com/OiLmDMZ.png" alt="rocket gif">
 </div>
