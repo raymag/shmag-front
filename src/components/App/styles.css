@@ -126,6 +126,16 @@ body {
   height: 2rem;
 }
 
+@keyframes spin {
+  from {transform: rotate(0);}
+  to {transform: rotate(360deg);}
+}
+
+#app #formHolder .loading-icon {
+  height: 1.6rem;
+  animation: spin 1.2s ease-in-out infinite;
+}
+
 @media (max-width: 720px){
   body {
     width: 100%;

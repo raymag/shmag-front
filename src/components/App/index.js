@@ -3,10 +3,13 @@ import axios from 'axios';
 
 import './styles.css';
 
+const loadingIcon = require('../../assets/configuration.png');
+
 function App() {
   const [url, setUrl] = useState('');
   const [slug, setSlug] = useState('');
   const [shortLink, setShortLink] = useState('');
+  const [isLoading, setIsLoading] = useState(false);
 
   useEffect(() => {
     const qParams = window.location.search;
@@ -28,6 +31,7 @@ function App() {
     let api_url = process.env.NODE_ENV === 'production' ? 'https://shmag.herokuapp.com/url' : 'http://192.168.31.152:5000/url';
     let shortlink_base_url = process.env.NODE_ENV === 'production' ? 'https://shmag.netlify.app' : 'localhost:5000';
 
+    setIsLoading(true);
     await axios({
       method: 'post',
       url: api_url,
@@ -37,9 +41,11 @@ function App() {
       data: dataToSend})
       .then(res => {
         setShortLink(`${shortlink_base_url}?q=${res.data.slug}`);
+        setIsLoading(false);
       })
       .catch(error => {
-        setShortLink('Link is Invalid')
+        setShortLink('Link is Invalid');
+        setIsLoading(false);
         console.log(`error: ${error}`);
       });
   }
@@ -77,7 +83,7 @@ function App() {
         </label>
         <input type="text" onChange={changeSlug} id="slug" placeholder="example: rxc" />
       </div>
-      <button>Shorten</button>
+        <button>{ isLoading ? (<img src={loadingIcon} className="loading-icon" alt="loading"/>) : 'Shorten' }</button>
       <div id="short-link-holder" >
         <input type="text" value={shortLink} disabled/>
         <button type="button" onClick={copy}>copy</button>
